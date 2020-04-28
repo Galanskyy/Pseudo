@@ -1,0 +1,80 @@
+*{
+    margin: 0;
+}
+.cont{
+    display: grid;
+    height: 100vh;
+    width: 100%;
+    grid-template-columns: 20fr 60fr 20fr;
+    grid-template-rows: 20% 50% 30%;
+    grid-template-areas: 
+    "head head head"
+    "lw prw prw"
+    "ft ft ft"
+    ;
+}
+.head{
+    grid-area: head;
+    background-color: #859855;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.left{
+    grid-area: lw;
+    background-color: 	#3d2e13;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: center;
+}
+.right{
+    grid-area: prw;
+    background-color: #bc8c6c;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    font-size: 1rem;
+}
+.footer{
+    grid-area: ft;
+    background-color: #737143;
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.text:hover{
+    color: white;
+    font-weight: 800;
+    font-size: 1.5rem;
+    transition: all 600ms linear;
+}
+.text:last-of-type{
+    color: purple;
+    font-size: 1.1rem;
+}
+.text::before{
+    content: "„";
+}
+.text::after{
+    content: "”";
+}
+a:active{
+    color: yellow;
+}
+
+.list .paragraph:nth-child(2n+1){
+    color: pink;
+}
+.list .paragraph:nth-child(2n+0){
+    color: lightgoldenrodyellow;
+}
+.list .paragraph::first-letter{
+    font-size: 2rem;
+}
+h1::selection{
+    background-color: yellow;
+    color: blue;
+}
